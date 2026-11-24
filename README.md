@@ -54,8 +54,8 @@ flowchart LR
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/your-org/agentroom.git
-cd agentroom
+git clone https://github.com/ruowaliweng-ship-it/AgentRoom.git
+cd AgentRoom
 
 # 2. 安装依赖（中国大陆可使用 npmmirror 加速）
 npm install --registry=https://registry.npmmirror.com
