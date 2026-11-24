@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="16" y1="12" x2="240" y2="244" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#172033"/>
+      <stop offset="55%" stop-color="#0F1524"/>
+      <stop offset="100%" stop-color="#0A0E18"/>
+    </linearGradient>
+    <linearGradient id="ribbon1" x1="40" y1="44" x2="210" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="55%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="ribbon2" x1="214" y1="88" x2="112" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="55%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="ribbon3" x1="138" y1="218" x2="48" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="55%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#60A5FA" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="borderShine" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0.38"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角底座 -->
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#bgGrad)" stroke="url(#borderShine)" stroke-width="2.5"/>
+
+  <!-- 柔和环境光 -->
+  <circle cx="128" cy="128" r="64" fill="url(#coreGlow)" opacity="0.5"/>
+
+  <!-- D3 三重丝带围合 (Ribbon Enclosure) -->
+  <!-- 丝带 1：顶部弧形丝带 -->
+  <path d="M56 112 C56 62, 108 38, 156 54 C192 66, 212 96, 206 130 C198 100, 174 82, 142 78 C108 74, 80 94, 78 126 C68 124, 60 119, 56 112 Z"
+        fill="url(#ribbon1)"/>
+
+  <!-- 丝带 2：右下弧形丝带 -->
+  <path d="M180 68 C218 98, 214 162, 176 196 C148 220, 108 222, 78 202 C110 206, 140 194, 160 168 C178 144, 180 108, 162 84 C169 78, 175 73, 180 68 Z"
+        fill="url(#ribbon2)"/>
+
+  <!-- 丝带 3：左下弧形丝带 -->
+  <path d="M168 202 C122 224, 62 198, 48 148 C38 112, 52 74, 84 56 C68 82, 66 116, 82 146 C96 174, 128 190, 160 184 C163 190, 166 196, 168 202 Z"
+        fill="url(#ribbon3)"/>
+
+  <!-- 围合内环细线 -->
+  <circle cx="128" cy="128" r="34" stroke="#E0F2FE" stroke-opacity="0.28" stroke-width="2"/>
+
+  <!-- 中枢协作节点核心 -->
+  <path d="M128 104 L148 128 L128 152 L108 128 Z" fill="#F8FAFC" fill-opacity="0.94"/>
+  <path d="M128 113 L140 128 L128 143 L116 128 Z" fill="url(#ribbon1)"/>
+  <circle cx="128" cy="128" r="5.5" fill="#FFFFFF"/>
+</svg>

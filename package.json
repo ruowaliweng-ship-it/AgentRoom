@@ -1,0 +1,66 @@
+{
+  "name": "agentroom",
+  "version": "1.0.0",
+  "description": "AgentRoom — Local-first Windows Multi-AI Collaboration Desktop Workspace with deterministic orchestration, folder security sandbox, inline diff approval, and zero-config local AI discovery.",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "node start.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node -e \"const fs=require('fs'),cp=require('child_process');const files=['start.js','main/main.js','preload/preload.js','core/sandbox.js','core/store.js','core/runner.js','core/orchestrator.js','core/discovery.js','core/diff.js','renderer/i18n.js','renderer/markdown.js','renderer/app.js'];for(const f of files){cp.execFileSync(process.execPath,['--check',f],{stdio:'inherit'});console.log('OK:',f);}\"",
+    "dist:win": "electron-builder --win nsis portable"
+  },
+  "keywords": [
+    "electron",
+    "ai",
+    "multi-agent",
+    "desktop",
+    "local-first",
+    "windows",
+    "ollama",
+    "deepseek",
+    "claude"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.agentroom.desktop",
+    "productName": "AgentRoom",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main/**/*",
+      "preload/**/*",
+      "core/**/*",
+      "renderer/**/*",
+      "assets/icon.ico",
+      "assets/icon.png",
+      "package.json"
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "portable": {
+      "artifactName": "AgentRoom-${version}-Portable-x64.exe"
+    }
+  }
+}

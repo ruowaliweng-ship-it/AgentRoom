@@ -1,0 +1,9 @@
+node_modules/
+dist/
+out/
+.agentroom-data/
+PROJECT_SPEC.md
+assets/icon_master.png
+*.log
+.DS_Store
+Thumbs.db
