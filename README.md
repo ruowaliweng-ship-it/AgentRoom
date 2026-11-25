@@ -78,6 +78,14 @@ npm run dist:win
 
 产物输出至 `dist/` 目录，图标自动使用 `assets/icon.ico`。
 
+## 赞助支持 · Support
+
+如果 **AgentRoom** 对你的工作或学习有所帮助，欢迎点一颗 **Star**，也可以请作者喝杯咖啡，支持项目持续迭代：
+
+<p align="center">
+  <img src="./assets/sponsor_wechat.png" alt="微信赞赏码 · WeChat Pay" width="240" />
+</p>
+
 ## 开源协议
 
 本项目基于 [MIT License](./LICENSE) 开源，欢迎 Star、Fork 与 PR！
